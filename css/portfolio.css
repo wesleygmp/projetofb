@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=GFS+Didot&family=Libre+Baskerville&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(26, 218, 187);
+    background: linear-gradient(-30deg, rgba(26, 218, 187, 1) 0%, rgba(42, 122, 242, 1) 100%);
+}
+
+/*template para área*/
+
+.container {
+    padding: 20px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    'header header header header header'
+    'content content sidebar sidebar sidebar'
+    'footer footer footer footer footer'
+    ;
+}
+.container div{
+    padding: 20px;
+}
+#header{
+    grid-area: header;
+}
+#sidebar{
+    width: 45vw;
+    grid-area: sidebar;
+    height: 72vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sidebar img{
+    border-radius: 50%;
+    border: 4px dotted white;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+#content{
+    height: 72vh;
+    grid-area: content;
+    justify-content: center;
+    align-items: center;
+}
+.alinhamento{
+    display: block;
+    align-items: center;
+
+}
+#content h6{
+    color:white;
+    font-size: 3vh;
+    font-family: 'GFS Didot', serif;
+    margin-top: 4vh;
+}
+#content h2{
+    color:white;
+    font-size: 6vh;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 4vh;
+  
+}
+#content p{
+    color:white;
+    font-size: 2.2vh;
+    line-height: 25px;
+    text-align: justify;
+    font-family: 'Bodoni Moda', serif;
+    margin-top: 4vh;
+
+
+}
+#footer{
+    grid-area: footer;
+}
+
+
+.minhacordefundo{
+    background-color: transparent;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        background-color: #db1616;
+        border: 5px solid rgb(234, 226, 5);
+        padding: 20px;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 
+        'header header header header'
+        'sidebar sidebar sidebar sidebar' 
+        'content content content content'
+        'footer footer footer footer'
+        ;
+    }
+    #header{
+        grid-area: header;
+    }
+    #sidebar{
+        grid-area: sidebar;
+    }
+    #content{
+        grid-area: content;
+    }
+    #footer{
+        grid-area: footer;
+    }
+  }
